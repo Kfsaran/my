@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>logo</title>
+    <style>
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            /* font-family: ; */
+        }
+        body{
+            height: 100vh;
+            width: 100%;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            height: 90%;
+            width: 95%;
+            background-color: rgb(43, 2, 43);
+            color: white;
+            /* position: relative; */
+        }
+        .inner nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 30px;
+            /* height: 15%; */
+            /* background-color: rgb(193, 159, 22); */
+            /* position: relative; */
+        }
+        nav h1{
+            margin-top: 20px;
+            font-size: 32px;
+            /* font-weight: 600; */
+            margin-left: 40px;
+            color: white;
+            position: relative;
+        }
+        nav h1::before{
+            content: '';
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            background: linear-gradient(90deg, black, rgb(0, 165, 66), rgb(8, 8, 99));
+            top: 50%;
+            left: -30px;
+            transform: translateY(-50%);
+        }
+        nav ul {
+            display: flex;
+            /* align-items: center; */
+        }
+        nav ul li {
+            list-style: none;
+        }
+        ul li a{
+            color: white;
+            text-transform: uppercase;
+            font-size: 15px;
+            text-decoration: none;
+            padding: 5px 20px;
+            border-radius: 20px;
+        }
+
+        ul li #sub{
+            /* padding: 5px 10px; */
+            background-image: linear-gradient(90deg, orange, rgb(124, 18, 18));
+            /* margin: 10px; */
+            padding: 8px 15px;
+            transition: 0.5s;
+            background-size: 200% auto;
+        }
+        ul li #sub:hover{
+            background-position: right center;
+        }
+
+        .content .left{
+            width: 50%;
+            height: 100%;
+            /* border: 1px solid white; */
+            padding: 40px 80px;
+            /* margin-bottom: 10px; */
+        }
+        .left h3{
+            margin-top: 40px;
+            text-transform: uppercase;
+        }
+        .left h1{
+            font-size: 50px;
+            margin-bottom: 15px;
+            /* line-height: 60px; */
+        }
+        .left span{
+            color: yellow;
+        }
+        .left a{
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 0.4px;
+            /* margin-bottom: 20px; */
+        }
+        .left p{
+            margin-top: 5px;
+            margin-bottom: 30px;
+        }
+        .left button {
+            background-color: rgb(6, 6, 84);
+            color: white;
+            text-transform: uppercase;
+            padding: 7px 15px;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            transition: 0.5 ease;
+        }
+        button:hover{
+            background-color: rgb(43, 2, 43);
+            box-shadow: 0 0 5px white;
+        }
+
+        /* .content .right{
+            width: 50%;
+            height: 100%;
+            padding-left: 100px;
+            overflow: hidden;
+        }
+        .right img{
+            width: 380px;
+            transform: translateY(-30px);
+            filter: saturate(120%);
+        } */
+        .gradient{
+            width: 350px;
+            height: 350px;
+            background-color: rgb(68, 24, 68);
+            top: 30%;
+            left: 70%;
+            /* border-left-style: 50%; */
+            position: absolute;
+            z-index: 1;
+            border-radius: 50%;
+            filter: blur(90px);
+            /* box-shadow: 0 100px 250px ; */
+        } 
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="inner">
+            <div class="gradient"></div>
+            <nav>
+                <h1>Logo</h1>
+                <ul>
+                    <li><a href="">home</a></li>
+                    <li><a href="">contact us</a></li>
+                    <li><a href="">content</a></li>
+                    <li><a href="">about us</a></li>
+                    <li><a href="" id="sub">subscribe</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="content">
+            <div class="left">
+                <h3>Web</h3>
+                <h1>Design & <br> <span>Development</span></h1>
+                <a href="">Lorem ipsum</a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum eveniet repellendus qui sequi iusto amet in eaque natus doloremque omnis, unde, esse autem possimus. Nam blanditiis dolore ex? Et, exercitationem quidem temporibus unde asperiores sunt illo sapiente suscipit culpa officia deleniti ipsa, impedit veniam atque eum labore. In, aliquam cupiditate!</p>
+                <button>read more</button>
+            </div>
+            <div class="right">
+                <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGAQ9EX6p6gAB-wCvP7HSZY3xrsnU0CAdfd-eblqCxGMzjt5wd5f53q8V-2FuaF3IaHPY&usqp=CAU" alt=""> -->
+            </div>
+        
+        </div>
+    </div>
+    
+</body>
+</html>
