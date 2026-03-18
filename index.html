@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <style>
+        :root{
+            --font-semi: 600;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .outer {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .inner {
+            height: 430px;
+            width: max-content;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        h1{
+            margin-bottom: 20px;
+        }
+        .subtitle {
+            display: flex;
+            /* justify-content: center; */
+            /* align-items: center; */
+            flex-direction: column;
+            padding: 5px 50px;
+            /* gap: 10px; */
+        }
+        input {
+            width: 270px;
+            padding: 6px ;
+            margin-bottom: 10px;
+            /* border: none; */
+            outline: none;
+        }
+        .btn {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        button {
+            width: 70%;
+            padding: 4px;
+            margin-top: 7px;
+            font-size: var(--font-semi);
+            box-shadow: 0 0 5px rgb(169, 169, 169);
+            border: none;
+            outline: none;
+        }
+        button:hover {
+            background-color: rgb(53, 53, 211);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="outer">
+        <div class="inner">
+        <div class="title">
+            <h1>Signup</h1>
+        </div>
+        <div class="subtitle">
+            <label for="">username</label>
+            <input type="text" id="username">
+            <label for="">email</label>
+            <input type="text" id="email">
+            <label for="">password</label>
+            <input type="text" id="password">
+            <label for="">confirm password</label>
+            <input type="text" id="firm_password">
+        </div>
+        <div class="btn">
+            <button id="btn">signup</button>
+        </div>
+        </div>
+    </div>
+
+    <script>
+
+        let btn = document.getElementById("btn")
+        btn.addEventListener("click", (e)=> {
+            e.preventDefault();
+
+            let username = document.getElementById("username").value;
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            let firm_password = document.getElementById("firm_password").value;
+
+            localStorage.setItem("username", username);
+            localStorage.setItem("email", email);
+            localStorage.setItem("password", password);
+            localStorage.setItem("firm_password", firm_password);
+
+            alert("Signup successful");
+            window.location.href = "login.html";
+        })
+
+    </script>
+    
+</body>
+</html>
